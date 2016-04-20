@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:orientation="vertical"
-    android:gravity="center"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.android.dbflowexample.OrganizationsActivity">
@@ -15,44 +15,81 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Organizations Maintenance Form"
-        android:textAppearance="?android:attr/textAppearanceLarge"/>
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <LinearLayout
         android:id="@+id/activity_organizations_form_linear_layout"
         android:layout_width="match_parent"
-        android:orientation="vertical"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:gravity="center"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New/Edit Form"
-            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Name"/>
+                android:text="Name" />
+
             <EditText
                 android:id="@+id/activity_organizations_name_edittext"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"/>
+                android:layout_weight="3"
+                android:enabled="false"
+                android:singleLine="true" />
         </LinearLayout>
 
-        <Button
-            android:id="@+id/activity_organizations_save_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Save"/>
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/activity_organizations_save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="Save" />
+
+            <Button
+                android:id="@+id/activity_organizations_new_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New" />
+
+            <Button
+                android:id="@+id/activity_organizations_delete_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="Delete" />
+
+            <Button
+                android:id="@+id/activity_organizations_edit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="Edit" />
+
+            <Button
+                android:id="@+id/activity_organizations_cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="Cancel" />
+        </LinearLayout>
+
     </LinearLayout>
 
     <ListView
         android:id="@+id/activity_organizations_listview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
 </LinearLayout>
